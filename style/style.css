@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #494545;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fbd8d8;
+    border: 1px solid #c9a8a8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #dc9b9b;;
+    border: 1px solid #bea1a1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-slider {
+    display: none; /* hide all slides initially */
+    width: 100%;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid #dcc2c2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .image-slider img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .image-slider h1 {
+    margin-top: 10px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .image-slider p {
+    margin-bottom: 18px;
+    font-size: 21px;
+    color: #666;
+  }
+  .slider {
+    position: relative; 
+  }
+  
+  .icons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border:50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* add this to make the icons span the full width of the slider */
+  }
+  
+  .right {
+    margin-left: 20px; /* reduced margin to 20px */
+
+  
+  }
+  
+  .left {
+    margin-right: 20px; /* reduced margin to 20px */
+    
+
+ 
+  }
+  .icons img {
+    cursor: pointer;
+    margin: 10px;
+    transition: opacity 0.3s;
+    border: 2px solid transparent; /* add a transparent border */
+    border-radius: 50%;
+    filter: invert(1); /* change icon color to white */
+    color: #fff;
+  }
+  
+  .icons img:hover {
+    opacity: 1;
+    border-color: rgb(189, 17, 17); /* change border color to red on hover */
+    filter: invert(1); /* keep icon color white on hover */
+  }
+    
+  .icons img {
+    cursor: pointer;
+    margin: 10px;
+    transition: opacity 0.3s;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 90%;
+    }
+    .slider-wrapper {
+      width: 90%;
+    }
+    .image-slider img {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      max-width: 95%;
+    }
+    .slider-wrapper {
+      width: 95%;
+    }
+    .image-slider img {
+      height: 150px;
+    }
+  }
